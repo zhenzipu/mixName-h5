@@ -1,0 +1,212 @@
+.header-main {
+  //   font-family: "微软雅黑";
+  height: 50px;
+  min-width: 1200px;
+  padding: 0 50px;
+  background: #2d303b url("../../images/bg-hd.png");
+  //   向下三角
+  .icon-drop {
+    width: 10px;
+    height: 5px;
+    transition: all 0.2s ease-in-out;
+    background: url("../../images/sprite.png") -85px -64px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  //   左侧logo
+  .header-logo {
+    display: inline-block;
+    float: left;
+    width: 260px;
+    height: 40px;
+    // logo图片
+    img {
+      float: left;
+      height: 32px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    // logo文字
+    span {
+      color: #fff;
+      font-size: 20px;
+      line-height: 40px;
+      margin-top: 10px;
+      margin-left: 5px;
+      float: left;
+      display: inline-block;
+      width: 100px;
+    }
+  }
+  //   头部右侧菜单
+  .header-right {
+    float: right;
+    height: 50px;
+    > div {
+      float: left;
+      margin: 0 10px;
+      padding: 0 10px;
+    }
+    > div:hover {
+      background: rgba(22, 22, 27, 0.7);
+    }
+    // 用户名、下拉框
+    .user-con,
+    .idc-select-con,
+    .lang-select-con {
+      position: relative;
+      span {
+        color: #fff;
+        line-height: 50px;
+        font-size: 14px;
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        padding-right: 10px;
+      }
+      cursor: pointer;
+      .right-drop-con {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        display: none;
+        // box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+        list-style: none;
+        z-index: 99;
+        li {
+          line-height: 40px;
+          color: #fff;
+          padding-left: 15px;
+          font-size: 12px;
+        }
+        li:hover {
+          color: #51d2b7;
+          background: #000;
+        }
+      }
+    }
+    .idc-select-con {
+      span {
+        width: 150px;
+      }
+    }
+    .user-con:hover,
+    .idc-select-con:hover,
+    .lang-select-con:hover {
+      i.icon-drop {
+        transform: rotate(180deg);
+      }
+      .right-drop-con {
+        display: block;
+      }
+    }
+    // 消息
+    .message-con {
+      a {
+        color: #fff;
+        cursor: pointer;
+        .message-text {
+          line-height: 50px;
+          font-size: 14px;
+          display: inline-block;
+          float: left;
+        }
+        .message-num {
+          display: inline-block;
+          border-radius: 8px;
+          padding: 0 5px;
+          height: 14px;
+          line-height: 16px;
+          background: #51d2b7;
+          margin-left: 5px;
+          margin-top: 17px;
+          font-family: "Arial";
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  //   头部菜单模块
+  .header-menu {
+    float: left;
+    display: inline-block;
+    .menu-con {
+      list-style: none;
+      p.menu-title {
+        font-size: 14px;
+        cursor: pointer;
+      }
+      > li {
+        float: left;
+        display: inline-block;
+        line-height: 48px;
+        font-size: 16px;
+        padding: 0 10px;
+        margin: 0 5px;
+        color: #fff;
+        .drop-con {
+          width: 100%;
+          position: absolute;
+          top: 50px;
+          left: 0;
+          max-height: 0;
+          transition: max-height 0.35s ease-in-out;
+          overflow: hidden;
+          background: #000;
+          opacity: 0.8;
+          z-index: 99;
+        }
+        .drop-con:hover {
+          opacity: 1;
+        }
+      }
+      > li:hover {
+        background: rgba(22, 22, 27, 0.7);
+        > p.menu-title {
+          color: #51d2b7;
+        }
+        border-bottom: 2px solid #51d2b7;
+        .drop-con {
+          max-height: 500px;
+          //   transition: max-height 0.25s ease-in-out;
+        }
+      }
+      .drop-child-con {
+        width: 1200px;
+        margin: 10px auto;
+        padding: 20px;
+        display: block;
+        li.child-con {
+          display: inline-block;
+          width: 240px;
+          > p.child-title {
+            width: 150px;
+            border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 34px;
+          }
+          .drop-child-item {
+            display: block;
+            list-style: none;
+            width: 150px;
+            a {
+              color: #a6a6a6;
+              line-height: 30px;
+              padding: 0 10px;
+              display: block;
+              font-size: 12px;
+              cursor: pointer;
+            }
+            a:hover {
+              background: #000;
+              color: #51d2b7;
+            }
+          }
+        }
+      }
+    }
+  }
+}

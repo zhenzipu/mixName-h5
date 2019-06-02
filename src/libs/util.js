@@ -1,6 +1,6 @@
 let util = {};
 util.title = function(title) {
-  title = title ||"MinName";
+  title = title ||"MixName";
   window.document.title = title;
 };
 
